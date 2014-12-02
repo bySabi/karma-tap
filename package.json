@@ -1,0 +1,23 @@
+{
+  "name": "karma-tape",
+  "version": "1.0.0",
+  "description": "adapter from karma to the tape testing framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "karma",
+    "karma-plugin",
+    "karma-adapter",
+    "tape"
+  ],
+  "author": "Tom MacWright",
+  "license": "ISC",
+  "devDependencies": {
+    "karma": "^0.12.28"
+  },
+  "dependencies": {
+    "tap-parser": "^0.7.0"
+  }
+}
