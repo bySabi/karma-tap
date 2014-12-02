@@ -1,48 +1,48 @@
 var createStartFn = function(tc, env) {
-    var parser = tapParser(function(results) {
-            tc.complete();
-        })
-        .on('assert', function(assert) {
-            tc.result({
-                description: assert.name,
-                success: assert.ok,
-                suite: []
-            });
-        });
+  var parse_stream = tapParser(function(results) {
+    tc.complete();
+  }).on('assert', function(assertion) {
+    tc.result({
+      description: assertion.name,
+      success: assertion.ok,
+      suite: []
+    });
+  });
 
-    var getConsole = function(currentWindow) {
-      return currentWindow.console || {
-          log: function() {},
-          info: function() {},
-          warn: function() {},
-          error: function() {},
-          debug: function() {}
-        };
-    };
+  // this part lifted from zuul
+  // https://github.com/defunctzombie/zuul/blob/master/frameworks/tape/client.js
+  var originalLog = console.log;
+  console.log = function (msg) {
+    if (!parse_stream.writable) return;
+    var index = 1;
+    var args = arguments;
 
-    function processConsole(tc, msg) {
-        parser.write(msg + '\n');
+    if (typeof msg === 'string') {
+      msg = msg.replace(/(^|[^%])%[sd]/g, function (_, s) {
+        return s + args[index++];
+      });
+    }
+    else msg = inspect(msg);
+
+    for (var i = index; i < args.length; i++) {
+      msg += ' ' + inspect(args[i]);
     }
 
-    var contextWindow = window;
-    var localConsole = contextWindow.console = getConsole(contextWindow);
-    var browserConsoleLog = localConsole.log;
-    var logMethods = ['log', 'info', 'warn', 'error', 'debug'];
-    var patchConsoleMethod = function(method) {
-        var orig = localConsole[method];
-        if (!orig) {
-            return;
-        }
-        localConsole[method] = function() {
-            processConsole(method, arguments[0]);
-            return Function.prototype.apply.call(orig, localConsole, arguments);
-        };
-    };
-    for (var i = 0; i < logMethods.length; i++) {
-        patchConsoleMethod(logMethods[i]);
+    parse_stream.write(msg + '\n');
+    if (/^# fail\s*\d+$/.test(msg) || /^# ok/.test(msg)) {
+      // reset console.log to make sure this stream doesn't get a write error.
+      console.log = originalLog;
+      parse_stream.end();
     }
-    return function(config) {
-    };
+
+    if (typeof originalLog === 'function') {
+      return originalLog.apply(this, arguments);
+    }
+    else if (originalLog) return originalLog(arguments[0]);
+  };
+
+  return function(config) {
+  };
 };
 
 window.__karma__.start = createStartFn(window.__karma__);
