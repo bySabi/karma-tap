@@ -1,5 +1,5 @@
 {
-  "name": "karma-tape",
+  "name": "karma-tap",
   "version": "1.0.0",
   "description": "adapter from karma to the tape testing framework",
   "main": "index.js",
@@ -10,7 +10,8 @@
     "karma",
     "karma-plugin",
     "karma-adapter",
-    "tape"
+    "tape",
+    "tap"
   ],
   "author": "Tom MacWright",
   "license": "ISC",
