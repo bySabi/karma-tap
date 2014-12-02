@@ -1,10 +1,16 @@
 var createStartFn = function(tc, env) {
+  var numResults = 0;
   var parse_stream = tapParser(function(results) {
-    tc.complete();
+    tc.info({ total: numResults });
+    tc.complete({
+      coverage: window.__coverage__
+    });
   }).on('assert', function(assertion) {
+    numResults++;
     tc.result({
       description: assertion.name,
       success: assertion.ok,
+      log: [],
       suite: []
     });
   });
