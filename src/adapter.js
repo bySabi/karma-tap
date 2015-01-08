@@ -28,7 +28,6 @@ var createStartFn = function(tc, env) {
         return s + args[index++];
       });
     }
-    else msg = inspect(msg);
 
     for (var i = index; i < args.length; i++) {
       msg += ' ' + inspect(args[i]);
