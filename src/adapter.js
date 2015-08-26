@@ -36,7 +36,7 @@ var createStartFn = function(tc, env) {
     }
 
     for (var i = index; i < args.length; i++) {
-      msg += ' ' + inspect(args[i]);
+      msg += ' ' + args[i];
     }
 
     parse_stream.write(msg + '\n');
