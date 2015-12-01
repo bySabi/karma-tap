@@ -23,6 +23,6 @@
     "karma": "^0.12.28"
   },
   "dependencies": {
-    "tap-parser": "^0.7.0"
+    "tap-parser": "^1.2.2"
   }
 }

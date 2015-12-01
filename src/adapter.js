@@ -15,7 +15,7 @@ var createStartFn = function(tc, env) {
     res.push({
       description: assertion.name,
       success: assertion.ok,
-      log: [],
+      log: [JSON.stringify(assertion.diag || assertion, null, 2)],
       suite: [],
       time: new Date().getTime() - startTime
     });
