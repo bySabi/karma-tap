@@ -1,0 +1,8 @@
+.DS_Store
+.idea/
+*.sublime-workspace
+
+node_modules/
+
+# npm debug file
+npm-debug.log
