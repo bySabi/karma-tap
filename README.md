@@ -1,7 +1,7 @@
 # Karma TAP adapter
 
 This adapter reads [TAP](http://testanything.org/) output from runners like
-[tape](https://github.com/substack/tape) into [Karma](http://karma-runner.github.io/0.12/index.html).
+[tape](https://github.com/substack/tape) into [Karma](http://karma-runner.github.io/1.0/index.html)
 
 ## Installation
 
@@ -22,3 +22,6 @@ module.exports = function(config) {
     });
 };
 ```
+
+## TAP Protocol
+Support TAP Protocol version `13`
