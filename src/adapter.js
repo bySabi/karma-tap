@@ -1,9 +1,7 @@
-// global object tapParser from 'parser.js'
-var finished = tapParser.finished;
-var parser = tapParser.parser;
-
 function createStartFn(tc) {
   return function(config) {
+    // global object tapParser from 'parser.js'
+    var finished = tapParser.finished, parser = tapParser.parser;
     var numResults = 0;
     var done = false;
     var res = [];
