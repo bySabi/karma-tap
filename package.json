@@ -1,13 +1,16 @@
 {
   "name": "karma-tap",
-  "version": "2.0.1",
-  "description": "adapter from karma to the tape testing framework",
+  "version": "2.1.0",
+  "description": "Karma Adapter to tape testing framework",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf lib",
     "build:parser": "browserify src/parser.js --s tapParser -o lib/parser.js",
     "build-npm": "npm run clean && mkdirp lib && npm run build:parser",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "karma": "karma start",
+    "lint": "eslint . --ext .js",
+    "testonly": "npm run karma",
+    "test": "npm run lint && npm run testonly"
   },
   "repository": {
     "type": "git",
@@ -20,19 +23,27 @@
     "tape",
     "tap"
   ],
-  "author": "Tom MacWright",
-  "contributors": [
-    "bySabi Files <> (https://github.com/bySabi)"
-  ],
-  "license": "ISC",
   "peerDependencies": {
     "karma": "1.x.x"
   },
   "devDependencies": {
+    "eslint": "3.x.x",
+    "eslint-modules-standard-deviation--es5": "1.x.x",
+    "karma": "1.x.x",
+    "karma-jsdom-launcher": "3.x.x",
+    "karma-browserify": "5.x.x",
+    "karma-tap-pretty-reporter": "1.x.x",
     "browserify": "13.x.x",
+    "watchify": "3.x.x",
     "tap-parser": "1.x.x",
     "tap-finished": "0.0.1",
+    "tape": "4.x.x",
     "mkdirp": "*",
     "rimraf": "*"
-  }
+  },
+  "author": "Tom MacWright",
+  "contributors": [
+    "bySabi Files <> (https://github.com/bySabi)"
+  ],
+  "license": "ISC"
 }
