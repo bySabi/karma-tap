@@ -1,16 +1,17 @@
 function createStartFn(tc) {
   return function(config) {
     // global object tapParser from 'parser.js'
-    var finished = tapParser.finished, parser = tapParser.parser;
+    var finished = tapParser.finished; // eslint-disable-line no-undef
+    var parser = tapParser.parser; // eslint-disable-line no-undef
     var numResults = 0;
     var done = false;
     var res = [];
     var suite = '';
     var startTime = new Date().getTime();
-    var parse_stream = parser();
+    var parseStream = parser();
     var skip = /^# SKIP\s/;
 
-    parse_stream.on('comment', function(comment) {
+    parseStream.on('comment', function(comment) {
       // handle skipped test
       if (skip.test(comment)) {
         res.push({
@@ -24,7 +25,7 @@ function createStartFn(tc) {
       suite = comment;
     });
 
-    parse_stream.on('assert', function(assertion) {
+    parseStream.on('assert', function(assertion) {
       numResults++;
       res.push({
         description: assertion.name,
@@ -35,7 +36,7 @@ function createStartFn(tc) {
       });
     });
 
-    parse_stream.on('complete', function(results) {
+    parseStream.on('complete', function(results) {
       tc.info({ total: numResults });
       for (var i = 0, len = res.length; i < len; i++) {
         tc.result(res[i]);
@@ -47,9 +48,9 @@ function createStartFn(tc) {
 
     // this part lifted from zuul
     // https://github.com/defunctzombie/zuul/blob/master/frameworks/tape/client.js
-    var finished_stream = finished(function() {
+    var finishedStream = finished(function() {
       done = true;
-      parse_stream.end();
+      parseStream.end();
     });
 
     var originalLog = console.log;
@@ -58,8 +59,8 @@ function createStartFn(tc) {
 
       // do not write in a closed WriteStream
       if (!done) {
-        parse_stream.write(msg + '\n');
-        finished_stream.write(msg + '\n');
+        parseStream.write(msg + '\n');
+        finishedStream.write(msg + '\n');
       }
 
       // transfer log to original console,
