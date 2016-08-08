@@ -1,3 +1,3 @@
 module.exports = {
-  'extends': ['eslint-config-standard-deviation']
+  'extends': ['standard-deviation--es5']
 };

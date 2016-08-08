@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "eslint": "3.x.x",
-    "eslint-modules-standard-deviation": "*",
+    "eslint-modules-standard-deviation--es5": "1.x.x",
     "karma": "1.x.x",
     "karma-jsdom-launcher": "3.x.x",
     "karma-browserify": "5.x.x",
