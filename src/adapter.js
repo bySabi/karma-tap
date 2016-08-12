@@ -58,6 +58,9 @@ function createStartFn(tc) {
         }
       }
 
+      // transfer log to original console,
+      // this shows the tap output in console
+      // and also let the user add console logs
       if (typeof originalLog === 'function') {
         return originalLog.apply(this, arguments);
       }
