@@ -1,6 +1,7 @@
 # Karma TAP adapter
 
 [![npm version](https://badge.fury.io/js/karma-tap.svg)](https://badge.fury.io/js/karma-tap)
+[![npm downloads](https://img.shields.io/npm/dm/karma-tap.svg?style=flat-square)](https://www.npmjs.com/package/karma-tap)
 
 > This adapter reads [TAP](http://testanything.org/) output from runners like
 [tape](https://github.com/substack/tape) into [Karma](http://karma-runner.github.io/1.0/index.html)
@@ -35,11 +36,14 @@ module.exports = function(config) {
 Support TAP Protocol version `13`
 
 ## Credits
-Credit to:
+
 ### author
 * Tom MacWright <> [@tmcw](https://github.com/tmcw)
-### top contributors
+
+### current mantainers
 * [@bySabi](https://github.com/bySabi)
+
+### top contributors
 * [@eiriksm](https://github.com/eiriksm)
 
 ## Contributing

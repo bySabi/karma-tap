@@ -1,6 +1,6 @@
 {
   "name": "karma-tap",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Karma Adapter to tape testing framework",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,8 @@
     "karma": "karma start",
     "lint": "eslint . --ext .js",
     "testonly": "npm run karma",
-    "test": "npm run lint && npm run testonly"
+    "test": "npm run lint && npm run testonly",
+    "prepublish": "npm run build-npm"
   },
   "repository": {
     "type": "git",
