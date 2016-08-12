@@ -9,9 +9,9 @@ module.exports = function(config) {
     // List plugins explicitly, since autoloading karma-tap
     // won't work here
     plugins: [
-      require('karma-browserify'),
-      require('karma-jsdom-launcher'),
-      require('karma-tap-pretty-reporter'),
+      'karma-browserify',
+      'karma-jsdom-launcher',
+      'karma-tap-pretty-reporter',
       require('./')
     ],
 

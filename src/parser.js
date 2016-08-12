@@ -1,4 +1,1 @@
-module.exports = {
-  finished: require('tap-finished'),
-  parser: require('tap-parser')
-};
+module.exports = require('tap-parser');
