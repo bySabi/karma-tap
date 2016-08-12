@@ -1,6 +1,6 @@
 {
   "name": "karma-tap",
-  "version": "2.1.3",
+  "version": "2.1.4",
   "description": "Karma Adapter to tape testing framework",
   "main": "index.js",
   "scripts": {
@@ -15,12 +15,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mapbox/karma-tap.git"
+    "url": "https://github.com/bySabi/karma-tap.git"
   },
+  "homepage": "https://github.com/bySabi/karma-tap.git",
+  "bugs": "https://github.com/bySabi/karma-tap/issues",
   "keywords": [
     "karma",
     "karma-plugin",
     "karma-adapter",
+    "karma-framework",
     "tape",
     "tap"
   ],
@@ -39,7 +42,7 @@
     "tap-parser": "1.x.x",
     "tape": "4.x.x",
     "mkdirp": "*",
-    "rimraf": "*"
+    "rimraf": "2.x.x"
   },
   "author": "Tom MacWright",
   "contributors": [
