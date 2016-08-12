@@ -1,6 +1,6 @@
 {
   "name": "karma-tap",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Karma Adapter to tape testing framework",
   "main": "index.js",
   "scripts": {
