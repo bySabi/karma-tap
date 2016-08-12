@@ -1,21 +1,20 @@
 function createStartFn(tc) {
   return function(config) {
-    // global object tapParser from 'parser.js'
-    var finished = tapParser.finished; // eslint-disable-line no-undef
-    var parser = tapParser.parser; // eslint-disable-line no-undef
+    // export from 'parser.js'
+    var parser = tapParser; // eslint-disable-line no-undef
     var numResults = 0;
-    var done = false;
+    var closed = false;
     var res = [];
     var suite = '';
     var startTime = new Date().getTime();
     var parseStream = parser();
-    var skip = /^# SKIP\s/;
+    var SKIP = /^# SKIP\s/;
 
     parseStream.on('comment', function(comment) {
       // handle skipped test
-      if (skip.test(comment)) {
+      if (SKIP.test(comment)) {
         res.push({
-          description: comment.replace(skip, ''),
+          description: comment.replace(SKIP, ''),
           skipped: true
         });
         return;
@@ -46,21 +45,17 @@ function createStartFn(tc) {
       });
     });
 
-    // this part lifted from zuul
-    // https://github.com/defunctzombie/zuul/blob/master/frameworks/tape/client.js
-    var finishedStream = finished(function() {
-      done = true;
-      parseStream.end();
-    });
-
     var originalLog = console.log;
     console.log = function () {
       var msg = arguments[0];
 
       // do not write in a closed WriteStream
-      if (!done) {
+      if (!closed) {
         parseStream.write(msg + '\n');
-        finishedStream.write(msg + '\n');
+        if (/^# fail\s*\d+$/.test(msg) || /^# ok/.test(msg)) {
+          parseStream.end();
+          closed = true;
+        }
       }
 
       // transfer log to original console,

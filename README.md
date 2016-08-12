@@ -34,6 +34,14 @@ module.exports = function(config) {
 ## TAP Protocol
 Support TAP Protocol version `13`
 
+## Credits
+Credit to:
+### author
+* Tom MacWright <> [@tmcw](https://github.com/tmcw)
+### top contributors
+* [@bySabi](https://github.com/bySabi)
+* [@eiriksm](https://github.com/eiriksm)
+
 ## Contributing
 
 * Documentation improvement

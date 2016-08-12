@@ -36,7 +36,6 @@
     "browserify": "13.x.x",
     "watchify": "3.x.x",
     "tap-parser": "1.x.x",
-    "tap-finished": "0.0.1",
     "tape": "4.x.x",
     "mkdirp": "*",
     "rimraf": "*"
