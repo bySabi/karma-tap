@@ -10,7 +10,8 @@
     "karma": "karma start",
     "lint": "eslint . --ext .js",
     "testonly": "npm run karma",
-    "test": "npm run lint && npm run testonly"
+    "test": "npm run lint && npm run testonly",
+    "prepublish": "npm run build-npm"
   },
   "repository": {
     "type": "git",
