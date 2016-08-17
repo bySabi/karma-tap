@@ -1,6 +1,6 @@
 {
   "name": "karma-tap",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "description": "Karma Adapter to tape testing framework",
   "main": "index.js",
   "scripts": {
@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "eslint": "3.x.x",
+    "eslint-config-standard-deviation--es5": "1.x.x",
     "eslint-modules-standard-deviation--es5": "1.x.x",
     "karma": "1.x.x",
     "karma-jsdom-launcher": "3.x.x",
