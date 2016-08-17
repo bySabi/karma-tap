@@ -2,3 +2,4 @@
 .eslintrc.js
 karma.conf.js
 test
+.travis.yml
