@@ -1,5 +1,6 @@
-.eslintignore
-.eslintrc.js
-karma.conf.js
+CHANGELOG.md
+CONTRIBUTING.md
 test
+.eslintrc.js
+images
 .travis.yml
