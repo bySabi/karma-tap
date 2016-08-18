@@ -4,6 +4,7 @@ function createStartFn(tc) {
     var parser = tapParser; // eslint-disable-line no-undef
     var numResults = 0;
     var closed = false;
+    var bailout = false;
     var res = [];
     var suite = '';
     var startTime = new Date().getTime();
@@ -35,14 +36,23 @@ function createStartFn(tc) {
       });
     });
 
+    parseStream.on('bailout', function(reason) {
+      bailout = true;
+      parseStream.end();
+      closed = true;
+      tc.error(reason);
+    });
+
     parseStream.on('complete', function(results) {
-      tc.info({ total: numResults });
-      for (var i = 0, len = res.length; i < len; i++) {
-        tc.result(res[i]);
+      if (!bailout) {
+        tc.info({ total: numResults });
+        for (var i = 0, len = res.length; i < len; i++) {
+          tc.result(res[i]);
+        }
+        tc.complete({
+          coverage: window.__coverage__
+        });
       }
-      tc.complete({
-        coverage: window.__coverage__
-      });
     });
 
     var originalLog = console.log;
