@@ -1,6 +1,6 @@
 {
   "name": "karma-tap",
-  "version": "3.0.0-rc.1",
+  "version": "3.0.1",
   "description": "Karma Adapter to tape testing framework",
   "main": "index.js",
   "scripts": {
@@ -42,6 +42,7 @@
     "watchify": "3.x.x",
     "tap-parser": "2.x.x",
     "tape": "4.x.x",
+    "tap": "6.x.x",
     "mkdirp": "*",
     "rimraf": "2.x.x"
   },
