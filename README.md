@@ -32,7 +32,7 @@ module.exports = function(config) {
 ```
 
 ## Projects using `karma-tap`
-* https://github.com/bySabi/karma--tap--boilerplate
+* [carma-tap-webpack](https://github.com/bySabi/carma-tap-webpack)
 
 ## TAP Protocol
 Support TAP Protocol version `13`
