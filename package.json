@@ -25,7 +25,7 @@
     "lint": "eslint . --ext .js",
     "testonly": "npm run karma",
     "test": "npm run lint && npm run testonly",
-    "prepublish": "in-publish && npm run build-npm || not-in-publish"
+    "prepublish": "npm run build-npm"
   },
   "peerDependencies": {
     "karma": "1.x.x"
@@ -35,15 +35,14 @@
     "eslint-config-standard-deviation--es5": "1.x.x",
     "eslint-modules-standard-deviation--es5": "1.x.x",
     "karma": "1.x.x",
-    "karma-jsdom-launcher": "3.x.x",
+    "karma-jsdom-launcher": "4.x.x",
     "karma-browserify": "5.x.x",
     "karma-tap-pretty-reporter": "1.x.x",
     "browserify": "13.x.x",
     "watchify": "3.x.x",
-    "tap-parser": "2.x.x",
+    "tap-parser": "3.x.x",
     "tape": "4.x.x",
-    "tap": "6.x.x",
-    "in-publish": "2.x.x",
+    "tap": "7.x.x",
     "mkdirp": "*",
     "rimraf": "2.x.x"
   },
