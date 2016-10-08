@@ -19,15 +19,15 @@ npm install karma-tap --save-dev
 `karma.conf.js`
 ```js
 module.exports = function(config) {
-    config.set({
-        frameworks: ['browserify', 'tap'],
-        files: [
-            'test/**/*.js'
-        ],
-        preprocessors: {
-            'test/**/*.js': [ 'browserify' ]
-        }
-    });
+  config.set({
+    frameworks: ['browserify', 'tap'],
+    files: [
+      'test/**/*.js'
+    ],
+    preprocessors: {
+      'test/**/*.js': [ 'browserify' ]
+    }
+  });
 };
 ```
 

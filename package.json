@@ -1,18 +1,7 @@
 {
   "name": "karma-tap",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Karma Adapter to tape testing framework",
-  "main": "index.js",
-  "scripts": {
-    "clean": "rimraf lib",
-    "build:parser": "browserify src/parser.js --s tapParser -o lib/parser.js",
-    "build-npm": "npm run clean && mkdirp lib && npm run build:parser",
-    "karma": "karma start",
-    "lint": "eslint . --ext .js",
-    "testonly": "npm run karma",
-    "test": "npm run lint && npm run testonly",
-    "prepublish": "npm run build-npm"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/bySabi/karma-tap.git"
@@ -27,6 +16,17 @@
     "tape",
     "tap"
   ],
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf lib",
+    "build-parser": "browserify src/parser.js --s tapParser -o lib/parser.js",
+    "build-npm": "npm run clean && mkdirp lib && npm run build-parser",
+    "karma": "karma start",
+    "lint": "eslint . --ext .js",
+    "testonly": "npm run karma",
+    "test": "npm run lint && npm run testonly",
+    "prepublish": "in-publish && npm run build-npm || not-in-publish"
+  },
   "peerDependencies": {
     "karma": "1.x.x"
   },
@@ -43,6 +43,7 @@
     "tap-parser": "2.x.x",
     "tape": "4.x.x",
     "tap": "6.x.x",
+    "in-publish": "2.x.x",
     "mkdirp": "*",
     "rimraf": "2.x.x"
   },
