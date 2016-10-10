@@ -3,6 +3,7 @@
 [![npm version](https://badge.fury.io/js/karma-tap.svg)](https://badge.fury.io/js/karma-tap)
 [![npm downloads](https://img.shields.io/npm/dm/karma-tap.svg?style=flat-square)](https://www.npmjs.com/package/karma-tap)
 [![Build Status](https://travis-ci.org/bySabi/karma-tap.svg?branch=master)](https://travis-ci.org/bySabi/karma-tap)
+[![Windows Tests](https://img.shields.io/appveyor/ci/bySabi/karma-tap/master.svg?label=Windows%20Tests)](https://ci.appveyor.com/project/bySabi/karma-tap)
 [![Known Vulnerabilities](https://snyk.io/test/github/bysabi/karma-tap/badge.svg)](https://snyk.io/test/github/bysabi/karma-tap)
 
 > This Karma adapter reads [TAP](http://testanything.org/) output from runners like
