@@ -1,13 +1,13 @@
 function createStartFn(tc) {
-  return function(config) {
-    // export from 'parser.js'
-    var parser = tapParser; // eslint-disable-line no-undef
+  // export from 'parser.js'
+  var parser = tapParser; // eslint-disable-line no-undef
+  return function() {
+    var parseStream = parser();
+    var startTime = new Date().getTime();
     var numResults = 0;
     var closed = false;
     var res = [];
     var suite = '';
-    var startTime = new Date().getTime();
-    var parseStream = parser();
     var SKIP = /^# SKIP\s/;
 
     parseStream.on('comment', function(comment) {
@@ -66,6 +66,6 @@ function createStartFn(tc) {
       }
     }
   }
-};
+}
 
 window.__karma__.start = createStartFn(window.__karma__);
