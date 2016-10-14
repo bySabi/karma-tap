@@ -21,8 +21,8 @@
     "clean": "rimraf lib",
     "build-parser": "browserify src/parser.js --s tapParser -o lib/parser.js",
     "build-npm": "npm run clean && mkdirp lib && npm run build-parser",
-    "karma": "karma start",
     "lint": "eslint . --ext .js",
+    "karma": "karma start",
     "testonly": "npm run karma",
     "test": "npm run lint && npm run testonly",
     "prepublish": "npm run build-npm"
