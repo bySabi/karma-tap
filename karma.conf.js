@@ -40,13 +40,6 @@ module.exports = function(config) {
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
     reporters: ['tap-pretty'],
 
-    // prettifier's: 'faucet', 'tap-spec', 'tap-min', 'tap-diff',
-    // 'tap-notify', 'tap-summary', 'tap-markdown'
-    tapReporter: {
-      // outputFile: './unit.tap',
-      separator: false
-    },
-
     // enable / disable colors in the output (reporters and logs)
     colors: true,
 
