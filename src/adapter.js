@@ -1,5 +1,5 @@
 function createStartFn(tc) {
-  // export from 'parser.js'
+  // come from './parser.js'
   var parser = tapParser; // eslint-disable-line no-undef
   return function() {
     var parseStream = parser();
