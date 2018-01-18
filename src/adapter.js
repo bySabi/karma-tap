@@ -1,8 +1,8 @@
-function createStartFn(tc) {
+function createStartFn (tc) {
   // come from './parser.js'
-  var parser = tapParser; // eslint-disable-line no-undef
-  return function() {
-    var parseStream = parser();
+  var Parser = tapParser; // eslint-disable-line no-undef
+  return function () {
+    var parseStream = new Parser();
     var startTime = new Date().getTime();
     var numResults = 0;
     var closed = false;
@@ -10,7 +10,7 @@ function createStartFn(tc) {
     var suite = '';
     var SKIP = /^# SKIP\s/;
 
-    parseStream.on('comment', function(comment) {
+    parseStream.on('comment', function (comment) {
       // handle skipped test
       if (SKIP.test(comment)) {
         res.push({
@@ -24,7 +24,7 @@ function createStartFn(tc) {
       suite = comment;
     });
 
-    parseStream.on('assert', function(assertion) {
+    parseStream.on('assert', function (assertion) {
       numResults++;
       res.push({
         description: assertion.name,
@@ -35,7 +35,7 @@ function createStartFn(tc) {
       });
     });
 
-    parseStream.on('complete', function(results) {
+    parseStream.on('complete', function (results) {
       tc.info({ total: numResults });
       for (var i = 0, len = res.length; i < len; i++) {
         tc.result(res[i]);
@@ -64,8 +64,8 @@ function createStartFn(tc) {
       if (typeof originalLog === 'function') {
         return originalLog.apply(this, arguments);
       }
-    }
-  }
+    };
+  };
 }
 
 window.__karma__.start = createStartFn(window.__karma__);
