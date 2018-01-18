@@ -45,10 +45,13 @@ Support TAP Protocol version `13`
 * Tom MacWright <> [@tmcw](https://github.com/tmcw)
 
 ### current mantainers
+
 * [@bySabi](https://github.com/bySabi)
 
-### top contributors
+### contributors
+
 * [@eiriksm](https://github.com/eiriksm)
+* [@Mike S](https://github.com/SpainTrain)
 
 ## Contributing
 

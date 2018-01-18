@@ -1,6 +1,6 @@
 {
   "name": "karma-tap",
-  "version": "3.1.1",
+  "version": "4.0.0",
   "description": "Karma Adapter to tape testing framework",
   "repository": {
     "type": "git",
@@ -34,15 +34,15 @@
     "eslint": "3.x.x",
     "eslint-config-standard-deviation--es5": "1.x.x",
     "eslint-modules-standard-deviation--es5": "1.x.x",
-    "karma": "1.x.x",
-    "karma-jsdom-launcher": "4.x.x",
+    "karma": "2.x.x",
+    "karma-jsdom-launcher": "6.x.x",
     "karma-browserify": "5.x.x",
     "karma-tap-pretty-reporter": "3.x.x",
-    "browserify": "13.x.x",
+    "browserify": "15.x.x",
     "watchify": "3.x.x",
-    "tap-parser": "3.x.x",
+    "tap-parser": "7.x.x",
     "tape": "4.x.x",
-    "tap": "7.x.x",
+    "tap": "11.x.x",
     "mkdirp": "*",
     "rimraf": "2.x.x"
   },
