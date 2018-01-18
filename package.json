@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "jsdom": "11.x.x",
-    "karma": "2.x.x",
+    "karma": "1.x.x",
     "karma-jsdom-launcher": "6.x.x",
     "karma-browserify": "5.x.x",
     "karma-tap-pretty-reporter": "3.x.x",
