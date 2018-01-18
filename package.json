@@ -28,7 +28,7 @@
     "prepublish": "npm run build-npm"
   },
   "peerDependencies": {
-    "karma": "1.x.x"
+    "karma": "1.x.x || 2.x.x"
   },
   "devDependencies": {
     "eslint": "3.x.x",
