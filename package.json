@@ -1,6 +1,6 @@
 {
   "name": "karma-tap",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "Karma Adapter to tape testing framework",
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf lib",
-    "build-parser": "browserify src/parser.js --s tapParser -o lib/parser.js",
+    "build-parser": "browserify src/parser.js --s tapParser -o lib/parser.js -t [ babelify --presets [ env ] ]",
     "build-npm": "npm run clean && mkdirp lib && npm run build-parser",
     "lint": "semistandard --fix --verbose | snazzy",
     "karma": "karma start",
@@ -31,20 +31,23 @@
     "karma": "1.x.x || 2.x.x"
   },
   "devDependencies": {
+    "babel-core": "6.x.x",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "8.x.x",
+    "browserify": "15.x.x",
     "jsdom": "9.x.x",
     "karma": "1.x.x",
-    "karma-jsdom-launcher": "6.x.x",
     "karma-browserify": "5.x.x",
+    "karma-jsdom-launcher": "6.x.x",
     "karma-tap-pretty-reporter": "3.x.x",
-    "browserify": "15.x.x",
-    "watchify": "3.x.x",
-    "tap-parser": "7.x.x",
-    "tape": "4.x.x",
-    "tap": "11.x.x",
     "mkdirp": "*",
     "rimraf": "2.x.x",
     "semistandard": "*",
-    "snazzy": "*"
+    "snazzy": "*",
+    "tap": "11.x.x",
+    "tap-parser": "7.x.x",
+    "tape": "4.x.x",
+    "watchify": "3.x.x"
   },
   "author": "Tom MacWright",
   "contributors": [
