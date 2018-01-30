@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "babel-core": "6.x.x",
-    "babel-preset-env": "^1.6.1",
+    "babel-preset-env": "1.x.x",
     "babelify": "8.x.x",
     "browserify": "15.x.x",
     "jsdom": "9.x.x",
