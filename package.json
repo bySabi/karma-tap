@@ -4,9 +4,9 @@
   "description": "Karma Adapter to tape testing framework",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bySabi/karma-tap.git"
+    "url": "https://github.com/bySabi/karma-tap/tree/3.X.X"
   },
-  "homepage": "https://github.com/bySabi/karma-tap.git",
+  "homepage": "https://github.com/bySabi/karma-tap/tree/3.X.X",
   "bugs": "https://github.com/bySabi/karma-tap/issues",
   "keywords": [
     "karma",
@@ -14,7 +14,8 @@
     "karma-adapter",
     "karma-framework",
     "tape",
-    "tap"
+    "tap",
+    "ES5"
   ],
   "main": "index.js",
   "scripts": {
