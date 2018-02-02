@@ -19,7 +19,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf lib",
-    "build-parser": "browserify src/parser.js --s tapParser -o lib/parser.js -t [ babelify --presets [ env ] ]",
+    "build-parser": "browserify src/parser.js --s tapParser -o lib/parser.js",
     "build-npm": "npm run clean && mkdirp lib && npm run build-parser",
     "lint": "semistandard --fix --verbose | snazzy",
     "karma": "karma start",
@@ -31,12 +31,9 @@
     "karma": "1.x.x || 2.x.x"
   },
   "devDependencies": {
-    "babel-core": "6.x.x",
-    "babel-preset-env": "1.x.x",
-    "babelify": "8.x.x",
     "browserify": "15.x.x",
     "jsdom": "9.x.x",
-    "karma": "1.x.x",
+    "karma": "2.x.x",
     "karma-browserify": "5.x.x",
     "karma-jsdom-launcher": "6.x.x",
     "karma-tap-pretty-reporter": "3.x.x",
