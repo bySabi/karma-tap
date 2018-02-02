@@ -1,6 +1,6 @@
 {
   "name": "karma-tap",
-  "version": "3.1.1",
+  "version": "3.2.0",
   "description": "Karma Adapter to tape testing framework",
   "repository": {
     "type": "git",
@@ -21,30 +21,30 @@
     "clean": "rimraf lib",
     "build-parser": "browserify src/parser.js --s tapParser -o lib/parser.js",
     "build-npm": "npm run clean && mkdirp lib && npm run build-parser",
-    "lint": "eslint . --ext .js",
+    "lint": "semistandard --fix --verbose | snazzy",
     "karma": "karma start",
     "testonly": "npm run karma",
     "test": "npm run lint && npm run testonly",
-    "prepublish": "npm run build-npm"
+    "prepare": "npm run build-npm"
   },
   "peerDependencies": {
-    "karma": "1.x.x"
+    "karma": "1.x.x || 2.x.x"
   },
   "devDependencies": {
-    "eslint": "3.x.x",
-    "eslint-config-standard-deviation--es5": "1.x.x",
-    "eslint-modules-standard-deviation--es5": "1.x.x",
+    "jsdom": "9.x.x",
     "karma": "1.x.x",
-    "karma-jsdom-launcher": "4.x.x",
     "karma-browserify": "5.x.x",
+    "karma-jsdom-launcher": "6.x.x",
     "karma-tap-pretty-reporter": "3.x.x",
-    "browserify": "13.x.x",
+    "browserify": "15.x.x",
     "watchify": "3.x.x",
-    "tap-parser": "3.x.x",
+    "tap": "11.x.x",
+    "tap-parser": "5.x.x",
     "tape": "4.x.x",
-    "tap": "7.x.x",
     "mkdirp": "*",
-    "rimraf": "2.x.x"
+    "rimraf": "2.x.x",
+    "semistandard": "*",
+    "snazzy": "*"
   },
   "author": "Tom MacWright",
   "contributors": [

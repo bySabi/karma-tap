@@ -2,8 +2,12 @@ sudo: false
 language: node_js
 node_js:
   - '4'
-  - '5'
   - '6'
+  - '8'
+  - '9'
+before_install:
+  - npm i -g npm@latest
+  - npm --version
 before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
