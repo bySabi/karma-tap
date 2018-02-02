@@ -5,4 +5,3 @@ src
 appveyor.yml
 .travis.yml
 karma.conf.js
-

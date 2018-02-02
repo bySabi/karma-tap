@@ -7,8 +7,10 @@
 [![bitHound Overall Score](https://www.bithound.io/github/bySabi/karma-tap/badges/score.svg)](https://www.bithound.io/github/bySabi/karma-tap)
 [![Donate](https://img.shields.io/badge/$-support-green.svg?style=flat-square)](https://paypal.me/bySabi/10)
 
-> This Karma adapter reads [TAP](http://testanything.org/) output from runners like
-[tape](https://github.com/substack/tape) into [Karma](http://karma-runner.github.io/1.0/index.html)
+> This Karma adapter reads [TAP](https://testanything.org/) output from runners like
+[tape](https://github.com/substack/tape) into [Karma](https://karma-runner.github.io)
+
+#### Works with Karma _1_ & _2_
 
 ## Installation
 
@@ -16,6 +18,9 @@
 ```bash
 npm install karma-tap --save-dev
 ```
+
+### ES5 browser support
+If needed ES5 browser support, Ex. `IE11`, use [karma-tap 3.x.x branch](https://github.com/bySabi/karma-tap/tree/3.X.X)
 
 ## Configuration Example
 `karma.conf.js`
@@ -63,3 +68,4 @@ Support TAP Protocol version `13`
 [ISC][isc-license]
 
 [isc-license]:./LICENSE
+[3.x.x](https://github.com/bySabi/karma-tap/tree/3.X.X)
