@@ -19,7 +19,7 @@
 npm install karma-tap --save-dev
 ```
 
-#### ES5 browser support
+### ES5 browser support
 karma-tap `3.x.x` branch support ES5 browsers like `IE11`
 
 ## Configuration Example
