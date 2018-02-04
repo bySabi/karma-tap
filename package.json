@@ -1,6 +1,6 @@
 {
   "name": "karma-tap",
-  "version": "4.1.2",
+  "version": "4.1.3",
   "description": "Karma Adapter to tape testing framework",
   "repository": {
     "type": "git",
