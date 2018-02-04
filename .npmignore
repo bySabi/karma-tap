@@ -1,7 +1,6 @@
 CHANGELOG.md
 CONTRIBUTING.md
 test
-src
 appveyor.yml
 .travis.yml
 karma.conf.js
