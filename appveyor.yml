@@ -7,7 +7,6 @@ environment:
 install:
   - ps: Install-Product node $env:nodejs_version
   - npm cache clear --force
-  - npm i npm@latest -g
   - set PATH=%APPDATA%\npm;%PATH%
   - set CONTINUOUS_INTEGRATION=true
   - set CI=true
