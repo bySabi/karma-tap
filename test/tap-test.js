@@ -3,8 +3,8 @@ var test = require('tape');
 var count = 0;
 
 test('a set of some tests', function (t) {
-  t.test('skip this', { skip: true }, function (t) {
-    t.fail('this should not even run');
+  t.test('skip this first', { skip: true }, function (t) {
+    t.fail('first instance should not even run');
     t.end();
   });
 
@@ -40,8 +40,8 @@ test('a set of some tests', function (t) {
     t.end();
   });
 
-  t.skip('skip this', function (t) {
-    t.fail('this should not even run');
+  t.skip('skip this second', function (t) {
+    t.fail('second instance should not even run');
     t.end();
   });
 
@@ -53,7 +53,7 @@ test('a test', function (t) {
   t.end();
 });
 
-test.skip('skip this', function (t) {
-  t.fail('this should not even run');
+test.skip('skip this third', function (t) {
+  t.fail('third instance should not even run');
   t.end();
 });

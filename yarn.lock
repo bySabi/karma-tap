@@ -3687,7 +3687,7 @@ mixin-deep@^1.2.0:
     for-in "^1.0.2"
     is-extendable "^1.0.1"
 
-mkdirp@*, mkdirp@^0.5.0, mkdirp@^0.5.1:
+mkdirp@^0.5.0, mkdirp@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
@@ -4788,7 +4788,7 @@ sax@^1.2.1, sax@^1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
 
-semistandard@*:
+semistandard@^12.0.1:
   version "12.0.1"
   resolved "https://registry.yarnpkg.com/semistandard/-/semistandard-12.0.1.tgz#82190c720b01cf68e3051e0985578f0b1d596683"
   dependencies:
@@ -4944,7 +4944,7 @@ snapdragon@^0.8.1:
     source-map-resolve "^0.5.0"
     use "^3.1.0"
 
-snazzy@*:
+snazzy@^7.1.1:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/snazzy/-/snazzy-7.1.1.tgz#26639b19a72c4d542c762049f829d14a1ad16879"
   dependencies:

@@ -1,7 +1,7 @@
-require("babel-polyfill");
+require('babel-polyfill');
 
 function createStartFn (tc) {
-  var Parser = require("tap-parser");
+  var Parser = require('tap-parser');
 
   return function () {
     var parseStream = new Parser();
@@ -22,7 +22,7 @@ function createStartFn (tc) {
         return;
       }
 
-      // TODO: validate if comment is a test 'name'
+      // FUTURE: validate if comment is a test 'name'
       suite = comment;
     });
 
