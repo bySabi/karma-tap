@@ -25,25 +25,26 @@
     "karma": "karma start karma.conf.js",
     "testonly": "npm run karma",
     "test": "npm run lint && npm run testonly",
+    "travis": "npm run buildnpm && npm test",
+    "appveyor": "npm run buildnpm && npm test",
     "prepare": "npm run build-npm"
   },
   "peerDependencies": {
     "karma": "1.x.x || 2.x.x"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.2",
-    "babel-preset-env": "^1.6.1",
-    "browserify": "^16.2.0",
-    "jsdom": "9.12.0",
+    "babel-cli": "6.x.x",
+    "babel-preset-env": "1.x.x",
+    "browserify": "16.x.x",
+    "jsdom": "9.x.x",
     "karma": "2.x.x",
     "karma-browserify": "5.x.x",
     "karma-jsdom-launcher": "6.x.x",
     "karma-tap-pretty-reporter": "4.x.x",
     "mkdirp": "^0.5.1",
     "rimraf": "2.x.x",
-    "semistandard": "^12.0.1",
-    "snazzy": "^7.1.1",
+    "semistandard": "12.x.x",
+    "snazzy": "7.x.x",
     "tap": "11.x.x",
     "tap-parser": "7.x.x",
     "tape": "4.x.x",
@@ -51,7 +52,10 @@
   },
   "author": "Tom MacWright",
   "contributors": [
-    "bySabi Files <> (https://github.com/bySabi)"
+    "bySabi Files <> (https://github.com/bySabi)",
+    "eiriksm <> (https://github.com/eiriksm)",
+    "Mike S <> (https://github.com/SpainTrain)",
+    "marques-work <> (https://github.com/marques-work)"
   ],
   "license": "ISC",
   "dependencies": {

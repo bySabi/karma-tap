@@ -4,19 +4,26 @@ environment:
     - nodejs_version: '6'
     - nodejs_version: '8'
     - nodejs_version: '9'
+    - nodejs_version: '10'
 install:
   - ps: Install-Product node $env:nodejs_version
-  - npm i yarn@1.6.0 -g
-  - yarn cache clean
+  - npm cache clear --force
+  - ps: >-
+      if ($env:nodejs_version -eq "4") {
+        npm install npm@latest-5 -g
+      } else {
+        npm install npm@latest -g
+      }
+  - npm --version
   - set PATH=%APPDATA%\npm;%PATH%
   - set CONTINUOUS_INTEGRATION=true
   - set CI=true
+  - npm config set progress=false
   - set PATH=%APPDATA%\npm;%PATH%
-  - yarn
+  - npm install
 matrix:
   fast_finish: true
 build: off
 test_script:
   - node --version
-  - yarn --version
-  - yarn test
+  - npm run appveyor

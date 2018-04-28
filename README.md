@@ -57,6 +57,7 @@ Support TAP Protocol version `13`
 
 * [@eiriksm](https://github.com/eiriksm)
 * [@Mike S](https://github.com/SpainTrain)
+* [@marques-work](https://github.com/marques-work)
 
 ## Contributing
 
