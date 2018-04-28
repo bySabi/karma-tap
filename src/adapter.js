@@ -1,6 +1,8 @@
+require('babel-polyfill');
+
 function createStartFn (tc) {
-  // come from './parser.js'
-  var Parser = tapParser; // eslint-disable-line no-undef
+  var Parser = require('tap-parser');
+
   return function () {
     var parseStream = new Parser();
     var startTime = new Date().getTime();
@@ -20,7 +22,7 @@ function createStartFn (tc) {
         return;
       }
 
-      // TODO: validate if comment is a test 'name'
+      // FUTURE: validate if comment is a test 'name'
       suite = comment;
     });
 

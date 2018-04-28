@@ -6,18 +6,17 @@ environment:
     - nodejs_version: '9'
 install:
   - ps: Install-Product node $env:nodejs_version
-  - npm cache clear --force
-  - npm i npm@latest -g
+  - npm i yarn@1.6.0 -g
+  - yarn cache clean
   - set PATH=%APPDATA%\npm;%PATH%
   - set CONTINUOUS_INTEGRATION=true
   - set CI=true
-  - npm config set progress=false
   - set PATH=%APPDATA%\npm;%PATH%
-  - npm install
+  - yarn
 matrix:
   fast_finish: true
 build: off
 test_script:
   - node --version
-  - npm --version
-  - npm test
+  - yarn --version
+  - yarn test

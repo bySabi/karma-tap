@@ -5,8 +5,7 @@ var createPattern = function (path) {
 };
 
 var initTAP = function (files, tapConfig) {
-  files.unshift(createPattern(path.join(__dirname, '/src/adapter.js')));
-  files.unshift(createPattern(path.join(__dirname, '/lib/parser.js')));
+  files.unshift(createPattern(path.join(__dirname, '/lib/adapter.js')));
 };
 
 initTAP.$inject = ['config.files'];
