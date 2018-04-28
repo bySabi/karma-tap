@@ -69,4 +69,3 @@ Support TAP Protocol version `13`
 [ISC][isc-license]
 
 [isc-license]:./LICENSE
-[3.x.x](https://github.com/bySabi/karma-tap/tree/3.X.X)
