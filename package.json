@@ -22,7 +22,7 @@
     "build-adapter": "browserify src/adapter.js | babel --out-file lib/adapter.js --presets=env",
     "build-npm": "npm run clean && mkdirp lib && npm run build-adapter",
     "lint": "semistandard --fix --verbose | snazzy",
-    "karma": "karma start",
+    "karma": "karma start karma.conf.js",
     "testonly": "npm run karma",
     "test": "npm run lint && npm run testonly",
     "prepare": "npm run build-npm"
