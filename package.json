@@ -30,7 +30,7 @@
     "prepare": "npm run build-npm"
   },
   "peerDependencies": {
-    "karma": "1.x.x || 2.x.x"
+    "karma": ">=1.0.0"
   },
   "devDependencies": {
     "babel-cli": "6.x.x",
