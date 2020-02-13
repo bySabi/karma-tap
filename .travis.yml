@@ -6,6 +6,8 @@ node_js:
   - '8'
   - '9'
   - '10'
+  - '12'
+  - '13'
 before_install:
   - if [[ "`node --version`" = v4* ]]; then
       npm install npm@latest-5 -g;
@@ -13,9 +15,6 @@ before_install:
       npm install npm@latest -g;
     fi
   - npm --version
-before_script:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
 script:
   - node --version
   - npm run travis
