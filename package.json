@@ -1,6 +1,6 @@
 {
   "name": "karma-tap",
-  "version": "4.1.4",
+  "version": "4.2.0",
   "description": "Karma Adapter to tape testing framework",
   "repository": {
     "type": "git",
@@ -55,7 +55,8 @@
     "bySabi Files <> (https://github.com/bySabi)",
     "eiriksm <> (https://github.com/eiriksm)",
     "Mike S <> (https://github.com/SpainTrain)",
-    "marques-work <> (https://github.com/marques-work)"
+    "marques-work <> (https://github.com/marques-work)",
+    "wesley luyten <> (https://github.com/luwes)"
   ],
   "license": "ISC",
   "dependencies": {

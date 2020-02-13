@@ -9,7 +9,7 @@
 > This Karma adapter reads [TAP](https://testanything.org/) output from runners like
 [tape](https://github.com/substack/tape) into [Karma](https://karma-runner.github.io)
 
-#### Works with Karma _1_ & _2_
+#### Works with Karma _1_, _2_, _3_ and _4_
 
 ## Installation
 
@@ -57,6 +57,7 @@ Support TAP Protocol version `13`
 * [@eiriksm](https://github.com/eiriksm)
 * [@Mike S](https://github.com/SpainTrain)
 * [@marques-work](https://github.com/marques-work)
+* [@wesley luyten](https://github.com/luwes)
 
 ## Contributing
 
