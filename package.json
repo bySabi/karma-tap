@@ -36,7 +36,7 @@
     "babel-cli": "6.x.x",
     "babel-preset-env": "1.x.x",
     "browserify": "16.x.x",
-    "jsdom": "9.x.x",
+    "jsdom": "16.x.x",
     "karma": "2.x.x",
     "karma-browserify": "5.x.x",
     "karma-jsdom-launcher": "6.x.x",
